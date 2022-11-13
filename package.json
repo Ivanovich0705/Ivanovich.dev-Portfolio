@@ -9,13 +9,15 @@
   "dependencies": {
     "@srexi/purecounterjs": "^1.5.0",
     "aos": "^2.3.4",
+    "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.10.1",
     "chalk": "^4.1.2",
     "glightbox": "^3.2.0",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.18.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.5",
-    "vue-typer": "^1.2.0",
-    "vuesax": "^4.0.1-alpha.25"
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.2",
