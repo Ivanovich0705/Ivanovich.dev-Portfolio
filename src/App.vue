@@ -4,6 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import navbarVue from './components/navbar.vue';
 import heroVue from "./components/hero.vue";
+import aboutVue from "./components/about.vue";
 
 </script>
 
@@ -11,7 +12,7 @@ import heroVue from "./components/hero.vue";
 
   <navbarVue/>
   <heroVue/>
-  <heroVue/>
+  <aboutVue/>
   <heroVue/>
   <heroVue/>
 
