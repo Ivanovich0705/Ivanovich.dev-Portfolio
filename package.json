@@ -15,12 +15,13 @@
     "glightbox": "^3.2.0",
     "primeicons": "^6.0.1",
     "primevue": "^3.18.1",
+    "typewriter-vue": "^0.5.19",
     "vue": "^3.2.41",
-    "vue-router": "^4.1.5",
-    "vue-typer": "^1.2.0"
+    "vue-router": "^4.1.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.2",
+    "sass": "^1.56.1",
     "vite": "^3.1.8"
   }
 }

@@ -1,14 +1,24 @@
+<script>
+import AOS from "aos";
+import TypeWriter from './typewriter.vue'
+export default {
+  name: 'App',
+  components: {
+    TypeWriter
+  },
+  mounted() {
+    AOS.init();
+
+  }
+};
+</script>
 <template>
 
     <div id="intro">
-        <Typist avgTypingDelay={120}>
-          <span className="intro-title">
-            {"hi, "}
-            <span className="intro-name">{"gazi"}</span>
-            {" here."}
-          </span>
-        </Typist>
-        <FadeInSection>
+            
+        <TypeWriter/>
+    
+        <div data-aos="fade-up" data-aos-delay="800">
           <div className="intro-subtitle">I create stuff sometimes.</div>
           <div className="intro-desc">
             I'm a software engineer and artist based in Toronto. I have great
@@ -22,7 +32,7 @@
             <EmailRoundedIcon></EmailRoundedIcon>
             {"  " + "Say hi!"}
           </a>
-        </FadeInSection>
+        </div>
     </div>
 
 </template>
@@ -42,13 +52,13 @@
     width: 200px !important;
   }
   
-  .Typist {
+  .VueWriter {
     color: var(--lightest-slate);
     text-align: center;
     font-size: 76px;
     margin-top: -30px;
   }
-  .Typist .Cursor--blinking {
+  .VueWriter .Cursor--blinking {
     color: var(--green-bright);
     padding-left: 4px;
   }
@@ -118,7 +128,7 @@
       font-size: 46px;
     }
   
-    .Typist {
+    .VueWriter {
       font-size: 36px;
     }
   

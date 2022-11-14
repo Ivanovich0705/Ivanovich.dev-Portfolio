@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, render } from 'vue'
 import App from './App.vue'
 import router from './router'
 import primevue from 'primevue/config'
@@ -10,9 +10,9 @@ import Navbar from './components/navbar.vue'
 import 'primevue/resources/primevue.min.css';
 import './assets/_theme.css'
 import 'primeicons/primeicons.css';
-
 import './assets/main.css'
 
+import 'aos/dist/aos.css'
 
 const app = createApp(App)
 

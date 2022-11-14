@@ -11,6 +11,9 @@ import heroVue from "./components/hero.vue";
 
   <navbarVue/>
   <heroVue/>
+  <heroVue/>
+  <heroVue/>
+  <heroVue/>
 
   
 
