@@ -44,6 +44,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
 body {
   min-height: 100vh;
   color: var(--color-text);

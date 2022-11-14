@@ -1,34 +1,53 @@
+<script>
+export default {
+  name: 'App',
+    components: {},
+    data() {
+        return {
+            tech_stack: [
+                "C++",
+                "Python",
+                "Vue.js",
+                "Javascript",
+                "SQL",
+                "MongoDB",
+                "ASP.NET Core",
+                "Angular",
+                "HTML & CSS",
+                "Bootstrap",
+            ],
+        }
+    }
+}
+</script>
+
 <template>
 
     <div id="about" data-aos="fade-up">
-          <div className="section-header ">
-            <span className="section-title">/ about </span>
+          <div class="section-header ">
+            <span class="section-title">/ about me</span>
           </div>
-          <div className="about-content">
-            <div className="about-description">
+          <div class="about-content">
+            <div class="about-description">
                 <p>
                     I am currently a third year <b style="color: var(--green-bright)">Engineer Software</b> major at the 
                     <a target="_blank" href="https://www.upc.edu.pe/en/nosotros/pilares-estrategicos/exigencia/">
-                      Peruvian University of Applied Sciences</a>. 
-                    After graduation, I will be joining{" "}
-                    <a href="https://www.aboutamazon.com/">Amazon</a> as a{" "}
-                    <b>Software Development Engineer</b> while undertaking a part-time
-                    <b> Master's of Science</b> in <b>Software Engineering </b>at{" "}
-                    <a href="https://www.ox.ac.uk/about">University of Oxford</a>.
+                    Peruvian University of Applied Sciences</a>. I'm interested in any new discovery of science and tech.
+                    I've always loved tech and fascinated me how it can help us to solve problems and make our lives easier, 
+                    especially with <b style="color: var(--green-bright)">artifical inteligence</b> and
+                     <b style="color: var(--green-bright)">machine learning</b> and would love to one day make a living out of that.  
                 </p>
-              {"Here are some technologies I have been working with:"}
-              <ul className="tech-stack">
-                {tech_stack.map(function (tech_item, i) {
-                  return (
-                    <div data-aos-delay="800">
-                      <li>{tech_item}</li>
-                    </div>
-                  );
-                })}
-              </ul>
+              Here are some technologies I have been working and loving them:
+                <div class="row">
+                        <ul class="tech-stack">
+                            <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="300+index*100" >
+                                <li>{{item}}</li>
+                            </div>
+                        </ul>
+                </div>
               <p>
-                Outside of work, I'm interested in following the developments of
-                science. I also play a lot of video games. And make TikToks.
+                Outside of work and studying, I also play video games. I'm a big fan of the <b style="color: var(--green-bright)"> Star Wars </b> series, and a high variety of sitcoms, 
+                 and starting into the audiophile world.
               </p>
             </div>
             <div className="about-image">
@@ -44,6 +63,7 @@
 
 
 #about {
+    padding-top: 200px;
     padding-left: 15%;
     padding-right: 25%;
     min-height: 60vh;

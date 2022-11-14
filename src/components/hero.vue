@@ -22,17 +22,16 @@ export default {
         <div data-aos="fade-up" data-aos-delay="800">
           <div className="intro-subtitle">Currently developing my future.</div>
           <div className="intro-desc">
-            I'm a software engineer, music lover and an artist (I believe coding is an art) living in Lima-Peru. 
-            I have great
-            interest in back-end development, artificial intelligence, machine learning, competitive programming and
-            human-computer interactions, and a bit on front-end development. Also I love helping and sharing my knowledge with everyone.
+            I'm a software engineer, music and tech lover living in Lima-Peru. <br>
+            I have great interest in artificial intelligence, machine learning, back-end development, competitive programming and
+            human-computer interactions. Also I love helping and sharing my tech knowledge.
           </div>
           <a
             href="mailto:ivanmoran.dev@gmail.com"
             className="intro-contact"
           >
           <i class="bi bi-envelope-at"></i>
-               Contact Me!
+            &nbsp Contact Me!
           </a>
         </div>
     </div>
@@ -91,7 +90,7 @@ a, u {
     color: var(--slate);
     font-family: "NTR", sans-serif;
     font-size: 22px;
-    max-width: 40%;
+    max-width: 50%;
     text-align: justify;
     padding-bottom: 50px;
   }

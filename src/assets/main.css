@@ -11,18 +11,39 @@
 }
 
 html {
-    scrollbar-color: blue white;
-    scrollbar-width: thin;
-  }
-  
-  /* WebKit and Chromiums */
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: var(--navy);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--green-bright);
-    border-radius: 5px;
-  }
+  scrollbar-width: thin;
+}
+
+
+/* WebKit and Chromiums */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green-bright);
+  border-radius: 5px;
+}
+
+.section-header {
+  display: flex;
+  padding-bottom: 42px;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 300px;
+  margin-top: 39px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+.section-title {
+  font-family: "NTR", sans-serif;
+  color: var(--lightest-slate);
+  font-size: 46px;
+  font-weight: bold;
+}

@@ -78,7 +78,7 @@
     font-size: 86px;
     font-weight: normal;
     span.typed-text.normal-text {
-      color: var(--light-slate);
+      color: var(--lightest-slate);
     }
   }
   .container{

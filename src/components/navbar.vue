@@ -43,6 +43,7 @@
 header{
     background-color: var(--navy);
     height: 10vh;
+
 }
 
 .navline {
@@ -87,7 +88,7 @@ export default {
             },
             {
                 label: '/about',
-                to: '/kh'
+                to: ''
             },
             {
                 label: '/experience',
