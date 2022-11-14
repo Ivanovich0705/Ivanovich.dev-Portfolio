@@ -22,7 +22,7 @@ export default {
         <div data-aos="fade-up" data-aos-delay="800">
           <div className="intro-subtitle">Currently developing my future.</div>
           <div className="intro-desc">
-            I'm a software engineer, music and tech lover living in Lima-Peru. <br>
+            I'm a software engineer, music and tech lover living in Peru and born in Argentina. <br>
             I have great interest in artificial intelligence, machine learning, back-end development, competitive programming and
             human-computer interactions. Also I love helping and sharing my tech knowledge.
           </div>

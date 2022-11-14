@@ -23,12 +23,12 @@ export default {
 
 <template>
 
-    <div id="about" data-aos="fade-up">
-          <div class="section-header ">
+    <div id="about">
+          <div  data-aos="fade-up" data-aos-delay="100" class="section-header ">
             <span class="section-title">/ about me</span>
           </div>
           <div class="about-content">
-            <div class="about-description">
+            <div data-aos="fade-up" data-aos-delay="200" class="about-description">
                 <p>
                     I am currently a third year <b style="color: var(--green-bright)">Engineer Software</b> major at the 
                     <a target="_blank" href="https://www.upc.edu.pe/en/nosotros/pilares-estrategicos/exigencia/">
@@ -40,14 +40,14 @@ export default {
               Here are some technologies I have been working and loving them:
                 <div class="row">
                         <ul class="tech-stack">
-                            <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="300+index*100" >
+                            <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="100+index*100" >
                                 <li>{{item}}</li>
                             </div>
                         </ul>
                 </div>
               <p>
-                Outside of work and studying, I also play video games. I'm a big fan of the <b style="color: var(--green-bright)"> Star Wars </b> series, and a high variety of sitcoms, 
-                 and starting into the audiophile world.
+                Outside of work and studying, I play video games. I'm a big fan of the <b style="color: var(--green-bright)"> Star Wars </b> series, and a high variety of sitcoms, 
+                and starting into the audiophile world. Also I'm a tennis and ping pong player.
               </p>
             </div>
             <div className="about-image">
