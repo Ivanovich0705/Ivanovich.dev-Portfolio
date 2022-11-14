@@ -11,6 +11,7 @@ import 'primevue/resources/primevue.min.css';
 import './assets/_theme.css'
 import 'primeicons/primeicons.css';
 import './assets/main.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import 'aos/dist/aos.css'
 

@@ -12,6 +12,7 @@ export default {
   }
 };
 </script>
+
 <template>
 
     <div id="intro">
@@ -19,18 +20,19 @@ export default {
         <TypeWriter/>
     
         <div data-aos="fade-up" data-aos-delay="800">
-          <div className="intro-subtitle">I create stuff sometimes.</div>
+          <div className="intro-subtitle">Currently developing my future.</div>
           <div className="intro-desc">
-            I'm a software engineer and artist based in Toronto. I have great
-            interest in full-stack development, artificial intelligence,
-            human-computer interactions, and everything in between.
+            I'm a software engineer, music lover and an artist (I believe coding is an art) living in Lima-Peru. 
+            I have great
+            interest in back-end development, artificial intelligence, machine learning, competitive programming and
+            human-computer interactions, and a bit on front-end development. Also I love helping and sharing my knowledge with everyone.
           </div>
           <a
-            href="mailto:gazi.jarin@mail.utoronto.ca"
+            href="mailto:ivanmoran.dev@gmail.com"
             className="intro-contact"
           >
-            <EmailRoundedIcon></EmailRoundedIcon>
-            {"  " + "Say hi!"}
+          <i class="bi bi-envelope-at"></i>
+               Contact Me!
           </a>
         </div>
     </div>
@@ -39,12 +41,15 @@ export default {
 
 
 <style>
+a, u {
+  text-decoration: none;
+}
 #intro {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 15%;
-    padding-top: 18%;
+    padding-top: 13%;
     min-height: 100vh;
   }
   

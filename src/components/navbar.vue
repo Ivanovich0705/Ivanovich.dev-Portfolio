@@ -1,10 +1,38 @@
 <template>
 
     <header class="sticky-md-top align-items-center" v-on:scroll="scrollFunction">
+
         <div class="navline">
-            <Steps :model="items" :readonly="false">
-            </Steps>
+            <nav id="pv_id_1" class="p-steps p-component">
+                <ol class="p-steps-list">
+                    <li class="p-steps-item p-highlight p-steps-current">
+                        <a href="#intro" class="p-menuitem-link router-link-active router-link-active-exact" tabindex="0" aria-current="step">
+                            <span class="p-steps-number">1</span>
+                            <span class="p-steps-title">/home</span>
+                        </a>
+                    </li>
+                    <li class="p-steps-item">
+                        <a href="#about" class="p-menuitem-link " tabindex="-1">
+                            <span class="p-steps-number">2</span>
+                            <span class="p-steps-title">/about</span>
+                        </a>
+                    </li>
+                    <li class="p-steps-item">
+                        <a href="#experience" class="p-menuitem-link" tabindex="-1">
+                            <span class="p-steps-number">3</span>
+                            <span class="p-steps-title">/experience</span>
+                        </a>
+                    </li>
+                    <li class="p-steps-item">
+                        <a href="/hjd" class="p-menuitem-link" tabindex="-1">
+                            <span class="p-steps-number">4</span>
+                            <span class="p-steps-title">/sofware-creations</span>
+                        </a>
+                    </li>
+                </ol>
+            </nav>
         </div>
+
       </header>
     
 
@@ -24,6 +52,8 @@ header{
     transform: translateY(-50%);
     width: 60%;
     margin: 0 auto;
+    scroll-behavior: smooth;
+    
 }
 
 ::v-deep(b) {
@@ -47,24 +77,25 @@ span{
 </style>
 
 <script scoped>
+//TODO:detect id and set it active on navbar with pi-highlight class
 export default {
     data() {
         return {
             items: [{
                 label: '/home',
-                to: '/'
+                to: '/#intro'
             },
             {
                 label: '/about',
-                to: '/seat'
+                to: '/kh'
             },
             {
                 label: '/experience',
-                to: '/payment'
+                to: '/hj'
             },
             {
                 label: '/sofware-creations',
-                to: '/confirmation'
+                to: '/hjd'
             }],
             formObject: {}
         }
