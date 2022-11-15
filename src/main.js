@@ -15,6 +15,7 @@ import './assets/main.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 import 'aos/dist/aos.css'
+import './assets/_theme.css'
 
 const app = createApp(App)
 
@@ -27,5 +28,3 @@ app.component('TabPanel', TabPanel)
 app.component('Navbar', Navbar)
 app.component('sectionTitle', sectionTitle)
 app.mount('#app')
-
-import './assets/_theme.css'

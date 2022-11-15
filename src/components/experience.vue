@@ -2,18 +2,18 @@
     <section id="experience">
         <sectionTitleVue title="/ experience"/>
         <div class="">
-            <TabView>
+            <TabView data-aos="fade-up" data-aos-delay="200">
                 <TabPanel v-for="job in jobs" :key="job.at" :header="job.at">
 
-                    <span className="joblist-job-title">
+                    <span class="joblist-job-title" data-aos="fade-up" data-aos-delay="200">
                         {{job.at}}
                     </span>
                     <!-- <span className="joblist-job-company">{key}</span> -->
-                    <div className="joblist-duration">
+                    <div class="joblist-duration" data-aos="fade-up" data-aos-delay="200">
                         {{job.duration}}
                     </div>
-                    <ul className="job-description">
-                        <div v-for="[index, item] of job.content.entries()" :data-aos-delay="100+index*100">
+                    <ul class="job-description">
+                        <div v-for="[index, item] of job.content.entries()" data-aos="fade-up" :data-aos-delay="100+index*150">
                             <li key={index}>{{item}}</li>
                         </div>                                    
                     </ul>
