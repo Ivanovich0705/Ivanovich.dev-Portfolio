@@ -23,7 +23,7 @@ export default {
           <div className="intro-subtitle">Currently developing my future.</div>
           <div className="intro-desc">
             I'm a software engineer, music and tech lover living in Peru and born in Argentina. <br>
-            I have great interest in artificial intelligence, machine learning, back-end development, competitive programming and
+            I have great interest in artificial intelligence, machine learning, full-stack development, competitive programming and
             human-computer interactions. Also I love helping and sharing my tech knowledge.
           </div>
           <a

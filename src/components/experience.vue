@@ -3,8 +3,21 @@
         <sectionTitleVue title="/ experience"/>
         <div class="">
             <TabView >
-                <TabPanel v-for="tab in tabs" :key="tab.title" :header="tab.title">
-                    <p>{{tab.content}}</p>
+                <TabPanel v-for="job in jobs" :key="job.at" :header="job.at">
+
+                    <span className="joblist-job-title">
+                        {{job.at}}
+                    </span>
+                    <!-- <span className="joblist-job-company">{key}</span> -->
+                    <div className="joblist-duration">
+                        {{job.duration}}
+                    </div>
+                    <ul className="job-description">
+                        <div v-for="[index, item] of job.content.entries()" :data-aos-delay="100+index*100">
+                            <li key={index}>{{item}}</li>
+                        </div>                                    
+                    </ul>
+
                 </TabPanel>
             </TabView>
         </div>
@@ -12,8 +25,6 @@
 
 </template>
 
-<style scoped>
-</style>
 
 <script scoped>
 import sectionTitleVue from './sectionTitle.vue';
@@ -24,10 +35,10 @@ export default {
     },
     data() {
         return {
-            tabs: [
-                {title: 'IT for Local Translator', content: ''},
-				{title: 'ULatin Hack', content: ''},
-				{title: 'Latin American Forum', content: 'Content 3'}
+            jobs: [
+                {at: 'ULatin Hack', duration:'MAY 2022', content: ["",""]},
+                {at: 'IT for Local Translator', duration:' APR 2018 - PRESENT', content: ["",""]},
+				{at: 'Latin American Forum', duration:'JUN 2022 ', content: ["",""]}
 			]
         }
     }
@@ -40,12 +51,63 @@ export default {
     padding-left: 15%;
     min-height: 60vh;
 }
+
+.joblist-job-title {
+    font-family: "NTR", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--lightest-slate);
+  }
+  
+  .joblist-job-company {
+    font-family: "NTR", sans-serif;
+    font-size: 28px;
+    color: var(--green-bright);
+    font-weight: bold;
+  }
+  
+  .joblist-duration {
+    font-family: "NTR", sans-serif;
+    font-size: 18px;
+    color: var(--slate);
+  }
 .tabs{
     width: 50%;
 }
 .p-tab-view .p-tabview-nav{
     width: 10%;
 }
+ul {
+    list-style: none;
+    margin-left: -40px;
+  }
+.job-description li::before {
+    content: "⤷    ";
+    color: var(--green-bright);
+    position: absolute;
+    left: 0;
+  }
+.job-description li {
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    color: var(--slate);
+  }
+  
+  .job-description {
+    padding-top: 24px;
+    max-width: 650px;
+    font-family: "NTR", sans-serif;
+    font-size: 20px;
+  }
+  
+  .job-description a,
+  .job-description b {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  
 @media only screen and (max-width: 600px) {
     #experience {
       padding-left: unset;

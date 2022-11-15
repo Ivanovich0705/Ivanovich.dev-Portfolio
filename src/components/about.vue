@@ -42,18 +42,18 @@ export default {
                 </p>
               Here are some technologies I have been working and loving them:
                 <div class="row">
-                        <ul class="tech-stack">
-                            <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="100+index*100" >
-                                <li>{{item}}</li>
-                            </div>
-                        </ul>
+                    <ul class="tech-stack">
+                        <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="100+index*100" >
+                            <li>{{item}}</li>
+                        </div>
+                    </ul>
                 </div>
               <p>
                 Outside of work and studying, I play video games. I'm a big fan of the <b style="color: var(--green-bright)"> Star Wars </b> series, and a high variety of sitcoms, 
                 and starting into the audiophile world. Also I'm a tennis and ping pong player.
               </p>
             </div>
-            <div className="about-image">
+            <div class="about-image" data-aos="fade-up" data-aos-delay="300">
 
                 <img src="../assets/profile.png" alt="">
                 
@@ -94,7 +94,7 @@ a{
 }
 
 .about-description li::before {
-    content: "▹    ";
+    content: "⤷    ";
     color: var(--green-bright);
     position: absolute;
     left: 0;
