@@ -10,10 +10,10 @@ import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
 import sectionTitle from './components/sectionTitle.vue'
 import 'primevue/resources/primevue.min.css';
-import './assets/_theme.css'
 import 'primeicons/primeicons.css';
 import './assets/main.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import './assets/_theme.css'
 
 import 'aos/dist/aos.css'
 
