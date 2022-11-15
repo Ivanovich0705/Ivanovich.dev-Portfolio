@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #experience {
     padding-top: 7%;
     padding-left: 15%;
