@@ -51,7 +51,9 @@ export default {
               </p>
             </div>
             <div className="about-image">
-              <img  />
+
+                <img src="../assets/profile.png" alt="">
+                
             </div>
           </div>
       </div>
@@ -115,6 +117,7 @@ export default {
 
 .about-image {
     padding-left: 40px;
+    transition: 0.5s ease;
 }
 
 .about-image img {
@@ -122,8 +125,11 @@ export default {
     height: auto;
     border-radius: 10px;
     margin-left: 30px;
-    box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
     border: none;
+    border-radius: 30%;
+    background-size: 500px;
+    background: no-repeat;
+    background-image: url( '../assets/blob.svg' );
 }
 
 @media only screen and (max-width: 788px) {
@@ -133,7 +139,8 @@ export default {
 }
 
 .about-image:hover {
-transform: translateY(-7px);
+    transform: scale(1.1);
+    transition: 0.5s ease;
 }
 
 @media only screen and (max-width: 600px) {
