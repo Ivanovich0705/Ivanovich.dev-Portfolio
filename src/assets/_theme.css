@@ -3969,7 +3969,7 @@
   }
   .p-tabview-nav {
     background: transparent;
-    display: block;
+    display: block !important;
   }
   .p-tabview .p-tabview-nav li {
     margin-right: 0;
