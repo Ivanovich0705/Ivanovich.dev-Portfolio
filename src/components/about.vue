@@ -23,7 +23,7 @@ export default {
 
 <template>
 
-    <div id="about">
+    <section id="about">
           <div  data-aos="fade-up" data-aos-delay="100" class="section-header ">
             <span class="section-title">/ about me</span>
           </div>
@@ -56,7 +56,7 @@ export default {
                 
             </div>
           </div>
-      </div>
+      </section>
 
 </template>
 

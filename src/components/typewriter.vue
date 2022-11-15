@@ -43,7 +43,6 @@
             this.charIndexHi
           );
           this.charIndexHi += 1;
-          console.log(this.typeValueHi);
           setTimeout(this.typeText, this.typingSpeed);
 
         } else if (this.charIndexName < this.displayTextArrayName[this.displayTextArrayIndex].length) {
@@ -52,7 +51,6 @@
             this.charIndexName
           );
           this.charIndexName += 1;
-          console.log(this.typeValueHi);
           setTimeout(this.typeText, this.typingSpeed);
 
         } else if (this.charIndexHere < this.displayTextArrayHere[this.displayTextArrayIndex].length) {
@@ -61,7 +59,6 @@
             this.charIndexHere
           );
           this.charIndexHere += 1;
-          console.log(this.typeValueHi);
           setTimeout(this.typeText, this.typingSpeed);
         }
       }

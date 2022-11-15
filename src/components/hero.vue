@@ -15,7 +15,7 @@ export default {
 
 <template>
 
-    <div id="intro">
+    <section id="intro">
             
         <TypeWriter/>
     
@@ -34,7 +34,7 @@ export default {
             &nbsp Contact Me!
           </a>
         </div>
-    </div>
+    </section>
 
 </template>
 

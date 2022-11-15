@@ -13,10 +13,7 @@ import aboutVue from "./components/about.vue";
   <navbarVue/>
   <heroVue/>
   <aboutVue/>
-  <heroVue/>
-  <heroVue/>
 
-  
 
 
 </template>
