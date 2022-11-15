@@ -3,12 +3,12 @@
         <sectionTitleVue title="/ experience"/>
         <div class="">
             <TabView data-aos="fade-up" data-aos-delay="200">
-                <TabPanel v-for="job in jobs" :key="job.at" :header="job.at">
+                <TabPanel v-for="job in jobs" :key="job.atTitle" :header="job.atTitle">
 
                     <span class="joblist-job-title" data-aos="fade-up" data-aos-delay="200">
                         {{job.at}}
                     </span>
-                    <!-- <span className="joblist-job-company">{key}</span> -->
+                    <span className="joblist-job-company">{{job.key}}</span>
                     <div class="joblist-duration" data-aos="fade-up" data-aos-delay="200">
                         {{job.duration}}
                     </div>
@@ -36,9 +36,9 @@ export default {
     data() {
         return {
             jobs: [
-                {at: 'ULatin Hack', duration:'MAY 2022', content: ["",""]},
-                {at: 'IT for Local Translator', duration:' APR 2018 - PRESENT', content: ["",""]},
-				{at: 'Latin American Forum', duration:'JUN 2022 ', content: ["",""]}
+                {at: 'ULatin Hack @', atTitle:"ULatin Hack", key:"SAP & CSTI", duration:'MAY 2022', content: ["",""]},
+                {at: 'IT for Local Translator',atTitle: 'IT for Local Translator', key:"", duration:' APR 2018 - PRESENT', content: ["",""]},
+				{at: 'Latin American Forum @', atTitle: 'Latin American Forum', key:"Oxford", duration:'JUN 2022 ', content: ["",""]}
 			]
         }
     }
