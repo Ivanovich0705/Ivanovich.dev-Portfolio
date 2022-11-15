@@ -13,7 +13,6 @@ import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
 import './assets/main.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-import './assets/_theme.css'
 
 import 'aos/dist/aos.css'
 
@@ -28,3 +27,5 @@ app.component('TabPanel', TabPanel)
 app.component('Navbar', Navbar)
 app.component('sectionTitle', sectionTitle)
 app.mount('#app')
+
+import './assets/_theme.css'

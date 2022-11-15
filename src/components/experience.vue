@@ -2,7 +2,7 @@
     <section id="experience">
         <sectionTitleVue title="/ experience"/>
         <div class="">
-            <TabView >
+            <TabView>
                 <TabPanel v-for="job in jobs" :key="job.at" :header="job.at">
 
                     <span className="joblist-job-title">
