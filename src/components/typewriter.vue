@@ -72,7 +72,7 @@
   @import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
 
   h1 {
-    font-size: 86px;
+    font-size: 9vh;
     font-weight: normal;
     span.typed-text.normal-text {
       color: var(--lightest-slate);
@@ -145,6 +145,12 @@
     font-family: 'NTR', sans-serif;
 
 
+  }
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 6vh;
+      align-items: center;
+    }
   }
   </style>
 

@@ -39,7 +39,10 @@ export default {
 </template>
 
 
-<style>
+<style scoped>
+a{
+  color: var(--green-bright);
+}
 a, u {
   text-decoration: none;
 }
@@ -49,7 +52,7 @@ a, u {
     align-items: flex-start;
     padding-left: 15%;
     padding-top: 13%;
-    min-height: 100vh;
+    min-height: 90vh;
   }
   
   canvas {
@@ -114,9 +117,6 @@ a, u {
   }
   
   @media only screen and (max-width: 600px) {
-    #gazi-model {
-      display: none;
-    }
   
     #intro {
       min-height: unset;

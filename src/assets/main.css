@@ -27,23 +27,15 @@ html {
   border-radius: 5px;
 }
 
-.section-header {
-  display: flex;
-  padding-bottom: 42px;
+
+@media screen and (max-width: 500px) {
+  #app{
+    font-size: 6vh;
+    align-items: center;
+    padding: 24px 40px;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
 }
 
-.section-header::after {
-  content: "";
-  display: block;
-  width: 300px;
-  margin-top: 39px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: var(--lightest-navy);
-}
-.section-title {
-  font-family: "NTR", sans-serif;
-  color: var(--lightest-slate);
-  font-size: 46px;
-  font-weight: bold;
-}

@@ -10,7 +10,6 @@
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --green-bright: #64ffda;
-  --green-brightaa: #55af9a;
   --green-tint: rgba(100, 255, 218, 0.1);
   scroll-behavior: smooth;
 
@@ -40,7 +39,6 @@
   box-sizing: border-box;
   margin: 0;
   position: relative;
-  font-weight: normal;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');

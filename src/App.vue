@@ -5,7 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import navbarVue from './components/navbar.vue';
 import heroVue from "./components/hero.vue";
 import aboutVue from "./components/about.vue";
-
+import experienceVue from "./components/experience.vue";
 </script>
 
 <template>
@@ -13,10 +13,11 @@ import aboutVue from "./components/about.vue";
   <navbarVue/>
   <heroVue/>
   <aboutVue/>
-
-
+  <experienceVue/>
+  
 
 </template>
 
 <style scoped>
+
 </style>

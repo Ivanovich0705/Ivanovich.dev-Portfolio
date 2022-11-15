@@ -17,7 +17,7 @@
                             <span class="p-steps-title">/about</span>
                         </a>
                     </li>
-                    <li class="p-steps-item experience scrollspy">
+                    <li href="#experience" class="p-steps-item scrollspy">
                         <a href="#experience" class="p-menuitem-link scrollspy" tabindex="-1">
                             <span class="p-steps-number">3</span>
                             <span class="p-steps-title">/experience</span>
@@ -38,12 +38,12 @@
 
 </template>
 
-<style>
+<style scoped>
+
 
 header{
     background-color: var(--navy);
     height: 10vh;
-
 }
 
 .navline {
@@ -75,29 +75,20 @@ span{
 .header-scrolled{
     opacity: 0.95;
 }
+
+@media screen and (max-width: 500px) {
+    header { 
+        display: flex;
+        visibility: hidden; 
+        align-items: center;
+    }
+}
 </style>
 
 <script scoped>
-//TODO:detect id and set it active on navbar with pi-highlight class
 export default {
     data() {
         return {
-            items: [{
-                label: '/home',
-                to: '/#intro'
-            },
-            {
-                label: '/about',
-                to: ''
-            },
-            {
-                label: '/experience',
-                to: '/hj'
-            },
-            {
-                label: '/sofware-creations',
-                to: '/hjd'
-            }],
             formObject: {}
         }
     },

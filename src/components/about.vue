@@ -1,7 +1,10 @@
 <script>
+import sectionTitle from './sectionTitle.vue'
 export default {
   name: 'App',
-    components: {},
+    components: {
+        sectionTitle
+    },
     data() {
         return {
             tech_stack: [
@@ -24,9 +27,9 @@ export default {
 <template>
 
     <section id="about">
-          <div  data-aos="fade-up" data-aos-delay="100" class="section-header ">
-            <span class="section-title">/ about me</span>
-          </div>
+        
+        <sectionTitle title="/ about me"/>
+
           <div class="about-content">
             <div data-aos="fade-up" data-aos-delay="200" class="about-description">
                 <p>
@@ -63,7 +66,9 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
 
-
+a{
+    color: var(--green-bright);
+  }
 #about {
     padding-top: 200px;
     padding-left: 15%;
