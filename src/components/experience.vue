@@ -31,14 +31,23 @@ import sectionTitleVue from './sectionTitle.vue';
 export default {
     name: "Experience",
     components: {
-        sectionTitleVue
+      sectionTitleVue
     },
     data() {
         return {
             jobs: [
-                {at: 'ULatin Hack @', atTitle:"ULatin Hack", key:"SAP & CSTI", duration:'MAY 2022', content: ["",""]},
-                {at: 'IT for Local Translator',atTitle: 'IT for Local Translator', key:"", duration:' APR 2018 - PRESENT', content: ["",""]},
-				{at: 'Latin American Forum @', atTitle: 'Latin American Forum', key:"Oxford", duration:'JUN 2022 ', content: ["",""]}
+            {
+              at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
+                "Learn about Design Thinking, Software Patterns and Best Practices from 8 international SAP exhibitors.",
+                "Used SAP technologies to build chatbot, Appgyver, IRPA, and backend."]
+            },
+            {
+              at: 'IT for Local Translator', atTitle: 'IT for Local Translator', key: "", duration: ' APR 2018 - PRESENT', content: ["Learned to communicate with technology terms in English.",
+                "Improved my communication skills.",
+              "Solved IT Problems on computers and social media."]
+            },
+            {
+              at: 'Latin American Forum @', atTitle: 'Latin American Forum', key: "Oxford", duration: 'JUN 2022 ', content: ["",""]}
 			]
         }
     }

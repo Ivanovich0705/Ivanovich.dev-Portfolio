@@ -14,6 +14,7 @@ import experienceVue from "./components/experience.vue";
   <heroVue/>
   <aboutVue/>
   <experienceVue/>
+  <experienceVue/>
   
 
 </template>
