@@ -1,5 +1,6 @@
 <template>
     <section id="contact">
+        <voxelVue class="voxel"/>
         <div className="sidebar-logos" href="/">
             <a target="_blank" href="mailto:ivanmoran.dev@gmail.com">
                 <i class="bi bi-envelope-fill"></i>        
@@ -15,6 +16,11 @@
 </template>
 
 <style scoped>
+.voxel{
+    height: 50px;
+    width: 50px;
+}
+
 i{
     font-size: 23px !important;
 }
@@ -36,3 +42,14 @@ color: var(--lightest-slate) !important;
     padding-bottom: 8px;
 }
 </style>
+
+<script>
+import voxelVue from './voxel.vue';
+
+export default {
+    name: 'contact',
+    components: {
+        voxelVue
+    }
+}
+</script>
