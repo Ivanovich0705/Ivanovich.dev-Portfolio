@@ -1,13 +1,13 @@
 <template>
     <section id="contact">
         <div className="sidebar-logos" href="/">
-            <a href="mailto:ivanmoran.dev@gmail.com">
+            <a target="_blank" href="mailto:ivanmoran.dev@gmail.com">
                 <i class="bi bi-envelope-fill"></i>        
             </a>
-            <a href="https://github.com/Ivanovich0705">
+            <a target="_blank" href="https://github.com/Ivanovich0705">
                 <i class="bi bi-github"></i>        
             </a>
-            <a href="https://www.linkedin.com/in/ivan-moran-36a446231//">
+            <a target="_blank" href="https://www.linkedin.com/in/ivan-moran-36a446231/">
                 <i class="bi bi-linkedin"></i>
             </a>
         </div>
