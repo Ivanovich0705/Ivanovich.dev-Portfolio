@@ -7,6 +7,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+
 export default {
   data () {
     return {}
@@ -17,15 +18,15 @@ export default {
       console.log(randomObject)
       switch (randomObject) {
         case 0:
-          this.glbPath = '/src/components/lib/keyboard.glb'
+          this.glbPath = '/public/keyboard.glb'
           this.objectFov = 5
           break;
         case 1:
-          this.glbPath = '/src/components/lib/oldpc.glb'
+          this.glbPath = '/public/oldpc.glb'
           this.objectFov = 2.5
           break;
         case 2:
-          this.glbPath = '/src/components/lib/spaceship.glb'
+          this.glbPath = '/public/spaceship.glb'
           this.objectFov = 30
           break;
       }
