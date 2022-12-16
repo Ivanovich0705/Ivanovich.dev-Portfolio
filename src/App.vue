@@ -7,6 +7,7 @@ import heroVue from "./components/hero.vue";
 import aboutVue from "./components/about.vue";
 import experienceVue from "./components/experience.vue";
 import contactVue from "./components/contact.vue";
+import proyectsVue from "./components/proyects.vue";
 </script>
 
 <template>
@@ -18,7 +19,7 @@ import contactVue from "./components/contact.vue";
       <heroVue/>
       <aboutVue/>
       <experienceVue/>
-      <experienceVue/>
+      <proyectsVue/>
     </body>
     <contactVue class="inline contact"/>
   </div>

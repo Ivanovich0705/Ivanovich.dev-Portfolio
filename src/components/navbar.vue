@@ -23,8 +23,8 @@
                             <span class="p-steps-title">/experience</span>
                         </a>
                     </li>
-                    <li class="p-steps-item scrollspy">
-                        <a href="/hjd" class="p-menuitem-link scrollspy" tabindex="-1">
+                    <li href="#proyects" class="p-steps-item scrollspy">
+                        <a href="#proyects" class="p-menuitem-link scrollspy" tabindex="-1">
                             <span class="p-steps-number">4</span>
                             <span class="p-steps-title">/sofware-creations</span>
                         </a>
