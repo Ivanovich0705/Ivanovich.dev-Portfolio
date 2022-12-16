@@ -18,15 +18,15 @@ export default {
       console.log(randomObject)
       switch (randomObject) {
         case 0:
-          this.glbPath = '/keyboard.glb'
+          this.glbPath = 'keyboard.glb'
           this.objectFov = 5
           break;
         case 1:
-          this.glbPath = '/oldpc.glb'
+          this.glbPath = 'oldpc.glb'
           this.objectFov = 2.5
           break;
         case 2:
-          this.glbPath = '/spaceship.glb'
+          this.glbPath = 'spaceship.glb'
           this.objectFov = 30
           break;
       }
