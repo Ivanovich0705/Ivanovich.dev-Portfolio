@@ -42,12 +42,12 @@ export default {
                 "Used SAP technologies to build chatbot, Appgyver, IRPA, and backend."]
             },
             {
-              at: 'IT for Local Translator', atTitle: 'IT for Local Translator', key: "", duration: ' APR 2018 - PRESENT', content: ["Learned to communicate with technology terms in English.",
+              at: 'IT Support for Local Translator', atTitle: 'IT Support', key: "", duration: ' APR 2018 - PRESENT', content: ["Learned to communicate with technology terms in English.",
                 "Improved my communication skills.",
               "Solved IT Problems on computers and social media."]
             },
             {
-              at: 'Latin American Forum @', atTitle: 'Latin American Forum', key: "Oxford", duration: 'JUN 2022 ', content: ["",""]}
+              at: 'Latin American Forum @', atTitle: 'Latin American Forum', key: "Oxford", duration: 'JUN 2022 ', content: ["Learned about basic economy","Helped to get social, economic, politic and cultural awareness of Latin America."]}
 			]
         }
     }
