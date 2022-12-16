@@ -5,33 +5,49 @@
 <script>
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 export default {
   data () {
-    return {
-      container: null,
-      scene: null,
-      camera: null,
-      controls: null,
-      renderer: null,
-    }
+    return {}
   },
   methods: {
-    init () {
+    init() {
+      let randomObject = Math.floor(Math.random() * 3)
+      console.log(randomObject)
+      switch (randomObject) {
+        case 0:
+          this.glbPath = '/src/components/lib/keyboard.glb'
+          this.objectFov = 5
+          break;
+        case 1:
+          this.glbPath = '/src/components/lib/oldpc.glb'
+          this.objectFov = 2.5
+          break;
+        case 2:
+          this.glbPath = '/src/components/lib/spaceship.glb'
+          this.objectFov = 30
+          break;
+      }
+
       // set container
       this.container = this.$refs.sceneContainer
       // add camera
-      const fov = 60 // Field of view
+      const fov = this.objectFov // Field of view
       const aspect = this.container.clientWidth / this.container.clientHeight
       const near = 0.1 // the near clipping plane
       const far = 30 // the far clipping plane
       const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-      camera.position.set(0, 5, 10)
       this.camera = camera
+
+      if (randomObject != 0)
+        this.camera.position.set(10, 10, -10)
+      else
+        this.camera.position.set(10, 10, 10)
+
       // create scene
       this.scene = new THREE.Scene()
-      this.scene.background = new THREE.Color('skyblue')
+      this.scene.background = new THREE.Color('#0a192f')
       // add lights
       const ambientLight = new THREE.HemisphereLight(
         0xffffff, // bright sky color
@@ -39,10 +55,12 @@ export default {
         1 // intensity
       )
       const mainLight = new THREE.DirectionalLight(0xffffff, 4.0)
-      mainLight.position.set(10, 10, 10)
+      mainLight.position.set(10, 0, 10)
       this.scene.add(ambientLight, mainLight)
       // add controls
       this.controls = new OrbitControls(this.camera, this.container)
+      //set orbitcontrol zoom false
+      this.controls.enableZoom = false
       // create renderer
       this.renderer = new THREE.WebGLRenderer({ antialias: true })
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
@@ -55,9 +73,11 @@ export default {
       this.camera.aspect = this.container.clientWidth / this.container.clientHeight
       this.camera.updateProjectionMatrix()
       this.renderer.setSize(this.container.clientWidth, this.container.clientHeight)
+
+      
       const loader = new GLTFLoader()
       loader.load(
-        'https://github.com/Ivanovich0705/glb_test/blob/main/osborne_1.glb?raw=true',
+        this.glbPath,
         gltf => {
           this.scene.add(gltf.scene)
         },
@@ -67,6 +87,8 @@ export default {
       this.renderer.setAnimationLoop(() => {
         this.render()
       })
+
+      
     },
     render () {
       this.renderer.render(this.scene, this.camera)

@@ -1,6 +1,8 @@
 <template>
     <section id="contact">
-        <voxelVue class="voxel"/>
+        <div class="test">
+            <voxelVue class="voxel"/>
+        </div>
         <div className="sidebar-logos" href="/">
             <a target="_blank" href="mailto:ivanmoran.dev@gmail.com">
                 <i class="bi bi-envelope-fill"></i>        
@@ -16,9 +18,13 @@
 </template>
 
 <style scoped>
+.test{
+    height: 300px;
+    width: 300px;
+}
 .voxel{
-    height: 50px;
-    width: 50px;
+    height: 300px;
+    width: 300px;
 }
 
 i{
@@ -34,7 +40,7 @@ color: var(--lightest-slate) !important;
 }
 
 .sidebar-logos {
-    padding-top: 42px;
+    padding-top: 0px;
     width: 90px;
     display: flex;
     flex-direction: row;
