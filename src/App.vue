@@ -38,4 +38,9 @@ import proyectsVue from "./components/proyects.vue";
   padding-right: 5%;
   bottom: 8%;
 }
+@media screen and (max-width: 500px) {
+  .contact{
+    position: relative;
+  }
+}
 </style>
