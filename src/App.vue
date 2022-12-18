@@ -14,7 +14,7 @@ import proyectsVue from "./components/proyects.vue";
 
 
   <navbarVue/>
-  <div>
+  <div class="main">
     <body class="inline">
       <heroVue/>
       <aboutVue/>
@@ -26,6 +26,9 @@ import proyectsVue from "./components/proyects.vue";
 </template>
 
 <style scoped>
+.main{
+  padding-bottom: 10vh;
+}
 .inline{
   display: inline-block;
 }
