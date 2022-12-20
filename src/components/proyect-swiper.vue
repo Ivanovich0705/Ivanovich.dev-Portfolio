@@ -13,11 +13,11 @@
               <div className="folder-icon">
                 <i class="bi bi-folder2-open"></i>
               </div>
-                <externalLinksVue githubLink="hola" openLink="Ad"/>
+                <externalLinksVue :githubLink="proyect.githubLink"/>
               </div>
-              <div className="card-title">Mazion</div>
-              <div className="card-desc">Adventour Game</div>
-              <div className="card-tech">C++</div>
+              <div className="card-title">{{proyect.title}}</div>
+              <div className="card-desc">{{proyect.desc}}</div>
+              <div className="card-tech">{{proyect.tech}}</div>
             </div>
             </li>
         </ul>
@@ -56,52 +56,28 @@ export default {
     return {
       proyects: [
         {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
+          title: "Mazion",
+          desc: "Adventour game made using Sprites in Windows Form.",
+          tech: "C++",
+          githubLink: "https://github.com/Ivanovich0705/Mazion"
         },
         {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
+          title: "FlightsPy",
+          desc: "Program to find the shortest between airports with Dijkstra's and Prim algorithm.",
+          tech: "Python Flask, Vue.js & MongoDB",
+          githubLink: "https://github.com/Ivanovich0705/acomplex-TF"
         },
         {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
+          title: "Take Me Home",
+          desc: "Program to communicate people to bring parcels from another countries.",
+          tech: " ASP. NET Core, Vue.js & MySQL",
+          githubLink: "https://github.com/orgs/TakeMeHome-Del-mundo-a-tus-manos/repositories"
         },
         {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
-        },
-        {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
-        },
-        {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
-        },
-        {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
-        },
-        {
-          title: "Proyect 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl ultricies nunc, eget ultricies nisl nunc vel nunc.",
-          image: "https://picsum.photos/200/300",
-          link: ""
+          title: "FastPorte",
+          desc: "Program to communicate truck and van drivers easily with clients.",
+          tech: "Spring Boot, Angular & PostreSQL",
+          githubLink: "https://github.com/orgs/Tech-Company-SW52/repositories"
         }
       ]
     }
@@ -132,16 +108,17 @@ export default {
   position: relative;
 }
 .last-swipper{
-  margin: 0;
+  margin: 30px;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+
 }
 
 .swiper {
   width: 240px;
-  height: 545px;
+  height: 630px;
 }
 
 .swiper-slide {
@@ -209,7 +186,7 @@ export default {
 .card-title {
   font-family: "NTR", sans-serif;
   color: var(--lightest-slate);
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
 }
 

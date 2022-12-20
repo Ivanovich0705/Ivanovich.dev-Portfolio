@@ -1,12 +1,11 @@
 <template>
     <span className="external-links">
-        <a class="github-icon" href={{this.props.githubLink}}>
+        <a class="github-icon" :href="this.githubLink" target="_blank">
             <i class="bi bi-github"></i>
         </a>
         <a v-if="openLink != null" class="open-icon" href="youtube.com">
             <i class="bi bi-window-stack"></i>
         </a>
-        
       </span>
 </template>
 

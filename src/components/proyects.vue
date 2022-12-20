@@ -40,6 +40,7 @@ export default {
 </script>
 
 <style scoped>
+
 #proyects {
     padding-top: 7%;
     padding-left: 15%;
