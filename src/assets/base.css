@@ -14,7 +14,14 @@
   scroll-behavior: smooth;
 
 }
-
+.swiper-button-prev{
+  color: var(--green-bright);
+  left: -40px !important;
+}
+.swiper-button-next{
+  color: var(--green-bright);
+  right: -40px !important;
+}
 
 
 @media (prefers-color-scheme: dark) {

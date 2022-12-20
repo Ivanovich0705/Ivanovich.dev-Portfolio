@@ -3,6 +3,7 @@
     :effect="'cards'"
     :grabCursor="true"
     :modules="modules"
+    :navigation="true"
     class="mySwiper"
   >
     <swiper-slide>
@@ -39,11 +40,12 @@ import externalLinksVue from './external-links.vue';
 
 // Import Swiper styles
 import "swiper/css";
-
+import "swiper/css/navigation";
 import "swiper/css/effect-cards";
 
+
 // import required modules
-import { EffectCards } from "swiper";
+import { EffectCards, Navigation } from "swiper";
 
 export default {
   components: {
@@ -96,13 +98,15 @@ export default {
   },
   setup() {
     return {
-      modules: [EffectCards],
+      modules: [EffectCards,Navigation],
     };
   },
 };
 </script>
 
 <style scoped>
+
+
 .proyect-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
