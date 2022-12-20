@@ -214,4 +214,7 @@ export default {
   color: var(--slate);
   font-size: 16px;
 }
+.projects-card:hover .card-tech {
+  color: var(--green-bright);
+}
 </style>
