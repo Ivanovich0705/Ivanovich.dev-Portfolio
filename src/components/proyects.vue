@@ -1,6 +1,6 @@
 <template>
     <section id="proyects">
-        <sectionTitleVue title="/ proyects"/>
+        <sectionTitleVue title="/ projects"/>
         <proyectSwiperVue class="swipper-ivan"/>
     </section>
 </template>

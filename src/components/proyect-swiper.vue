@@ -25,7 +25,7 @@
 
     <swiper-slide>
       <div class="section-header last-swipper">
-        <span class="section-title">More proyects in progress...</span>
+        <span class="section-title">More projects in progress...</span>
       </div>
     </swiper-slide>
     
@@ -64,7 +64,7 @@ export default {
         {
           title: "FlightsPy",
           desc: "Program to find the shortest between airports with Dijkstra's and Prim algorithm.",
-          tech: "Python Flask, Vue.js & MongoDB",
+          tech: "Python Flask, Vue.js, D3.js & MongoDB",
           githubLink: "https://github.com/Ivanovich0705/acomplex-TF"
         },
         {
@@ -78,6 +78,18 @@ export default {
           desc: "Program to communicate truck and van drivers easily with clients.",
           tech: "Spring Boot, Angular & PostreSQL",
           githubLink: "https://github.com/orgs/Tech-Company-SW52/repositories"
+        },
+        {
+          title: "Ivan's Portfolio",
+          desc: "Portfolio to show about me and my projects.",
+          tech: "Vue.js & Three.js",
+          githubLink: "https://github.com/Ivanovich0705/Ivanovich.dev-Portfolio"
+        },
+        {
+          title: "Ivan's C++ Notes",
+          desc: "Blog to show and save about C++ data structures, algorithms, POO, examples, and some little projects.",
+          tech: "C++ & Jupyter Notebook",
+          githubLink: "https://github.com/Ivanovich0705/C-Notes"
         }
       ]
     }
@@ -118,7 +130,7 @@ export default {
 
 .swiper {
   width: 240px;
-  height: 630px;
+  height: 665px;
 }
 
 .swiper-slide {
