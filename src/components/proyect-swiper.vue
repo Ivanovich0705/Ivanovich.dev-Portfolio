@@ -162,6 +162,7 @@ export default {
 @media (max-width: 1080px) {
   .proyect-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    overflow: scroll;
   }
 }
 
