@@ -152,7 +152,7 @@ export default {
   font-size: 25px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1912px) {
   .proyect-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     overflow: scroll;
