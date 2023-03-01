@@ -39,7 +39,7 @@ export default {
 	    {
               at: 'Full Stack Developer @', atTitle: "Bitacore", key: "Bitacore", duration: 'FEB 2023 - PRESENT', content: ["Use of Angular as Front-End Development.",
                 "Use of Spring Boot Java as Back-End Development.",
-                "Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Proyect Repositories."]
+                "Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Project Repositories."]
             },
             {
               at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
