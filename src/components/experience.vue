@@ -36,9 +36,14 @@ export default {
     data() {
         return {
             jobs: [
+	    {
+              at: 'Full Stack Developer @', atTitle: "Bitacore", key: "Bitacore", duration: 'FEB 2023 - PRESENT', content: ["Use of Angular as Front-End Development.",
+                "Use of Spring Boot Java as Back-End Development.",
+                "Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Proyect Repositories."]
+            },
             {
               at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
-                "Learn about Design Thinking, Software Patterns and Best Practices from 8 international SAP exhibitors.",
+                "Learned about Design Thinking, Software Patterns and Best Practices from 8 international SAP exhibitors.",
                 "Used SAP technologies to build chatbot, Appgyver, IRPA, and backend."]
             },
             {
