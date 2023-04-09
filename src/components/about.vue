@@ -33,7 +33,7 @@ export default {
           <div class="about-content">
             <div data-aos="fade-up" data-aos-delay="200" class="about-description">
                 <p>
-                    I am currently a third year <b style="color: var(--green-bright)">Engineer Software</b> major at the 
+                    I am currently a fourth year <b style="color: var(--green-bright)">Engineer Software</b> major at the 
                     <a target="_blank" href="https://www.upc.edu.pe/en/nosotros/pilares-estrategicos/exigencia/">
                     Peruvian University of Applied Sciences</a>. I'm interested in any new discovery of science and tech.
                     I've always loved tech and fascinated me how it can help us to solve problems and make our lives easier, 
