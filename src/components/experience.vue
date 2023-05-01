@@ -36,24 +36,29 @@ export default {
     data() {
         return {
             jobs: [
-	    {
-              at: 'Full Stack Developer @', atTitle: "Bitacore", key: "Bitacore", duration: 'FEB 2023 - PRESENT', content: ["Use of Angular as Front-End Development.",
-                "Use of Spring Boot Java as Back-End Development.",
-                "Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Project Repositories."]
-            },
-            {
-              at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
-                "Learned about Design Thinking, Software Patterns and Best Practices from 8 international SAP exhibitors.",
-                "Used SAP technologies to build chatbot, Appgyver, IRPA, and backend."]
-            },
-            {
-              at: 'IT Support for Local Translator', atTitle: 'IT Support', key: "", duration: ' APR 2018 - PRESENT', content: ["Learned to communicate with technology terms in English.",
-                "Improved my communication skills.",
-              "Solved IT Problems on computers and social media."]
-            },
-            {
-              at: 'Latin American Forum @', atTitle: 'Latin American Forum', key: "Oxford", duration: 'JUN 2022 ', content: ["Learned about basic economy","Helped to get social, economic, politic and cultural awareness of Latin America."]}
-			]
+		    {
+		      at: 'Full Stack Developer @', atTitle: "Bitacore", key: "Bitacore", duration: 'FEB 2023 - PRESENT', content: ["Use of Angular as Front-End Development.",
+			"Use of Spring Boot Java as Back-End Development.",
+			"Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Project Repositories."]
+		    },
+		    {
+		      at: 'Learn Student Ambassador @', atTitle: "Microsoft", key: "MLSA", duration: 'APR 2023 - PRESENT', content: ["Selected to be a part of the prestigious Microsoft Learn Student Ambassador program, which accepts only a small percentage of applicants based on their skills and professional achievements.",
+			"Learned about DevOps, including professional use of Jenkins and Tomcat.",
+			"Organized and led Microsoft Learn workshops and events on various topics including cloud computing and software development."]
+		    },
+		    {
+		      at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
+			"Learned about Design Thinking, Software Patterns and Best Practices from 8 international SAP exhibitors.",
+			"Used SAP technologies to build chatbot, Appgyver, IRPA, and backend."]
+		    },
+		    {
+		      at: 'IT Support for Local Translator', atTitle: 'IT Support', key: "", duration: ' APR 2018 - PRESENT', content: ["Learned to communicate with technology terms in English.",
+			"Improved my communication skills.",
+		      "Solved IT Problems on computers and social media."]
+		    },
+		    {
+		      at: 'Latin American Forum @', atTitle: 'Latin American Forum', key: "Oxford", duration: 'JUN 2022 ', content: ["Learned about basic economy","Helped to get social, economic, politic and cultural awareness of Latin America."]}
+		]
         }
     }
 }
