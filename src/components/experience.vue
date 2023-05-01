@@ -42,9 +42,15 @@ export default {
 			"Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Project Repositories."]
 		    },
 		    {
-		      at: 'Learn Student Ambassador @', atTitle: "Microsoft", key: "MLSA", duration: 'APR 2023 - PRESENT', content: ["Selected to be a part of the prestigious Microsoft Learn Student Ambassador program, which accepts only a small percentage of applicants based on their skills and professional achievements.",
+		      at: 'Learn Student Ambassador @', atTitle: "MLSA", key: "Microsoft", duration: 'APR 2023 - PRESENT', content: ["Selected to be a part of the prestigious Microsoft Learn Student Ambassador program, which accepts only a small percentage of applicants based on their skills and professional achievements.",
 			"Learned about DevOps, including professional use of Jenkins and Tomcat.",
 			"Organized and led Microsoft Learn workshops and events on various topics including cloud computing and software development."]
+		    },
+		    {
+		      at: 'Open Ai Hackaton Finalist @', atTitle: "Build Start Up Hackaton", key: "lablab.ai", duration: 'FEB 2023', content: ["Participated in the OpenAI hackathon and developed Gener8, a project that analyzes user YouTube videos and automatically generates sub-videos using sentiment analysis and OpenAI API.",
+			"Utilized Google's Python API to extract and analyze user-generated content for the hackathon project.",
+			"Implemented Firebase for real-time data synchronization and Google Cloud for hosting the application.",
+			"Built a sub-video generation tool that uses OpenAI's language generation models to automatically create sub-videos for content creators based on user input.", "Integrated the Google API to authenticate and authorize user credentials and access their YouTube and Google Drive accounts"]
 		    },
 		    {
 		      at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
