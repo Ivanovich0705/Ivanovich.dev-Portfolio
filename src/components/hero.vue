@@ -1,15 +1,9 @@
 <script>
-import AOS from "aos";
 import TypeWriter from './typewriter.vue'
 export default {
-  name: 'App',
+  name: 'Hero',
   components: {
     TypeWriter
-  },
-  mounted() {
-    // offset: px from the bottom of the screen before an element starts animating (default 120)
-    AOS.init({ offset: 20 });
-
   }
 };
 </script>

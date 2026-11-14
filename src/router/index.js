@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+const NAVBAR_OFFSET = 80
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,14 +12,27 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/photography',
+      name: 'photography',
+      // Lazy-loaded: the gallery code only downloads when someone opens the page
+      component: () => import('../views/PhotographyView.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    if (to.hash) {
+      // Coming from another page the section isn't rendered yet, so wait a moment
+      const delay = to.path === from.path ? 0 : 300
+      return new Promise(resolve => {
+        setTimeout(() => resolve({ el: to.hash, top: NAVBAR_OFFSET, behavior: 'smooth' }), delay)
+      })
+    }
+    return { top: 0 }
+  }
 })
 
 export default router

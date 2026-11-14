@@ -1,42 +1,30 @@
 <template>
 
-    <header class="sticky-md-top align-items-center" v-on:scroll="changeColor">
+    <header class="sticky-md-top align-items-center" :class="{ 'header-scrolled': scrolled }">
 
         <div class="navline">
-            <nav id="pv_id_1" class="p-steps p-component navigation">
+            <nav class="p-steps p-component navigation" aria-label="Main">
                 <ol class="p-steps-list">
-                    <li href="#intro" class="p-steps-item intro p-highlight scrollspy p-steps-current">
-                        <a href="#intro" class="p-menuitem-link router-link-active router-link-active-exact" tabindex="0" aria-current="step">
-                            <span class="p-steps-number">1</span>
-                            <span class="p-steps-title">/home</span>
-                        </a>
+                    <li
+                        v-for="(item, index) in items"
+                        :key="item.label"
+                        class="p-steps-item"
+                        :class="{ 'p-highlight': isActive(item) }"
+                    >
+                        <RouterLink
+                            :to="item.to"
+                            class="p-menuitem-link"
+                            :aria-current="isActive(item) ? 'page' : undefined"
+                        >
+                            <span class="p-steps-number">{{ index + 1 }}</span>
+                            <span class="p-steps-title">{{ item.label }}</span>
+                        </RouterLink>
                     </li>
-                    <li href="#about" class="p-steps-item about scrollspy">
-                        <a href="#about" class="p-menuitem-link" tabindex="-1">
-                            <span class="p-steps-number">2</span>
-                            <span class="p-steps-title">/about</span>
-                        </a>
-                    </li>
-                    <li href="#experience" class="p-steps-item scrollspy">
-                        <a href="#experience" class="p-menuitem-link scrollspy" tabindex="-1">
-                            <span class="p-steps-number">3</span>
-                            <span class="p-steps-title">/experience</span>
-                        </a>
-                    </li>
-                    <!-- Projects nav item hidden together with the Projects section in App.vue
-                    <li href="#proyects" class="p-steps-item scrollspy">
-                        <a href="#proyects" class="p-menuitem-link scrollspy" tabindex="-1">
-                            <span class="p-steps-number">4</span>
-                            <span class="p-steps-title">/projects</span>
-                        </a>
-                    </li>
-                    -->
                 </ol>
             </nav>
         </div>
 
       </header>
-    
 
 </template>
 
@@ -56,7 +44,7 @@ header{
     width: 60%;
     margin: 0 auto;
     scroll-behavior: smooth;
-    
+
 }
 
 ::v-deep(b) {
@@ -69,6 +57,7 @@ header{
 
 a{
     color: var(--green-bright);
+    text-decoration: none;
 }
 
 span{
@@ -79,74 +68,63 @@ span{
 }
 
 @media screen and (max-width: 500px) {
-    header { 
+    header {
         display: flex;
-        visibility: hidden; 
+        visibility: hidden;
         align-items: center;
     }
 }
 </style>
 
-<script scoped>
+<script>
+import { RouterLink } from 'vue-router'
+
+// Home page sections the navbar can scroll to.
+// Projects (#proyects) is hidden for now; add { label: '/projects', to: { path: '/', hash: '#proyects' }, section: 'proyects' } to bring it back.
+const ITEMS = [
+    { label: '/home', to: { path: '/', hash: '#intro' }, section: 'intro' },
+    { label: '/about', to: { path: '/', hash: '#about' }, section: 'about' },
+    { label: '/experience', to: { path: '/', hash: '#experience' }, section: 'experience' },
+    { label: '/photography', to: { path: '/photography' }, route: 'photography' },
+]
+
 export default {
+    components: { RouterLink },
     data() {
         return {
-            formObject: {}
+            items: ITEMS,
+            scrolled: false,
+            activeSection: 'intro',
         }
     },
-    created () {
-        window.addEventListener('scroll', this.handleScroll);
-        window.addEventListener("scroll", this.navHighlighter);
-        let sections = document.querySelectorAll("section[id]");
+    mounted() {
+        window.addEventListener('scroll', this.onScroll, { passive: true });
+        this.onScroll();
     },
-    destroyed () {
-        window.removeEventListener('scroll', this.handleScroll);
-    } ,
+    unmounted() {
+        window.removeEventListener('scroll', this.onScroll);
+    },
     methods: {
-        handleScroll(event) {
-            const header = document.querySelector('header');            
-
-            if (window.scrollY > 100) {
-                header.classList.add('header-scrolled');
-                
-            } else {
-                header.classList.remove('header-scrolled');
-
-            }
+        isActive(item) {
+            if (item.route) return this.$route.name === item.route;
+            return this.$route.name === 'home' && this.activeSection === item.section;
         },
-        navHighlighter() {
-            let sections = document.querySelectorAll("section[id]");
-            // Get current scroll position
-            let scrollY = window.pageYOffset;
-            
-            // Now we loop through sections to get height, top and ID values for each
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 100;
-                let sectionId = current.getAttribute("id");
-                if (
-                scrollY > sectionTop &&
-                scrollY <= sectionTop + sectionHeight
-                ){
-                    document.querySelector(".navigation li[href*=" + sectionId + "]").classList.add("p-highlight");
-                } else {
-                    document.querySelector(".navigation li[href*=" + sectionId + "]").classList.remove("p-highlight");
+        onScroll() {
+            this.scrolled = window.scrollY > 100;
+
+            // Highlight the home section currently on screen
+            const scrollY = window.scrollY;
+            for (const item of this.items) {
+                if (!item.section) continue;
+                const section = document.getElementById(item.section);
+                if (!section) continue;
+                const top = section.offsetTop - 100;
+                if (scrollY > top && scrollY <= top + section.offsetHeight) {
+                    this.activeSection = item.section;
                 }
-            });
-        },
-        nextPage(event) {
-            for (let field in event.formData) {
-                this.formObject[field] = event.formData[field];
             }
-
-            this.$router.push(this.items[event.pageIndex + 1].to);
+            if (scrollY <= 100) this.activeSection = 'intro';
         },
-        prevPage(event) {
-            this.$router.push(this.items[event.pageIndex - 1].to);
-        },
-        complete() {
-            this.$toast.add({severity:'success', summary:'Order submitted', detail: 'Dear, ' + this.formObject.firstname + ' ' + this.formObject.lastname + ' your order completed.'});
-        }
     }
 }
 </script>

@@ -1,9 +1,22 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import heroVue from '../components/hero.vue'
+import aboutVue from '../components/about.vue'
+import experienceVue from '../components/experience.vue'
+// Projects section hidden until there are new side projects to show
+// import proyectsVue from '../components/proyects.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="inline">
+    <heroVue/>
+    <aboutVue/>
+    <experienceVue/>
+    <!-- <proyectsVue/> -->
   </main>
 </template>
+
+<style scoped>
+.inline{
+  display: inline-block;
+}
+</style>

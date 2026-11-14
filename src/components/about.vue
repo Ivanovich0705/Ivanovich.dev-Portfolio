@@ -53,7 +53,7 @@ export default {
                 </div>
               <p>
                 Outside of work, I play video games, I'm a big Star Wars fan,
-                I enjoy sitcoms, audio gear and photography, and I play <b style="color: var(--green-bright)">tennis</b>.
+                I enjoy sitcoms, audio gear and <RouterLink to="/photography">photography</RouterLink>, and I play <b style="color: var(--green-bright)">tennis</b>.
               </p>
             </div>
             <div class="about-image" data-aos="fade-up" data-aos-delay="100">

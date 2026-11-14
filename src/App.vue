@@ -1,28 +1,31 @@
 <script setup>
 import "bootstrap/dist/css/bootstrap.min.css";
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { onMounted, nextTick } from 'vue'
+import { RouterView, useRoute, useRouter } from 'vue-router'
+import AOS from 'aos'
 import navbarVue from './components/navbar.vue';
-import heroVue from "./components/hero.vue";
-import aboutVue from "./components/about.vue";
-import experienceVue from "./components/experience.vue";
 import contactVue from "./components/contact.vue";
-import proyectsVue from "./components/proyects.vue";
+
+const router = useRouter()
+const route = useRoute()
+
+onMounted(() => {
+  // offset: px from the bottom of the screen before an element starts animating (default 120)
+  AOS.init({ offset: 20 })
+})
+
+// Re-scan for data-aos elements after every page change
+router.afterEach(() => {
+  nextTick(() => AOS.refreshHard())
+})
 </script>
 
 <template>
-
-
   <navbarVue/>
   <div class="main">
-    <body class="inline">
-      <heroVue/>
-      <aboutVue/>
-      <experienceVue/>
-      <!-- Projects section hidden until there are new side projects to show -->
-      <!-- <proyectsVue/> -->
-    </body>
-    <contactVue class="inline contact"/>
+    <RouterView/>
+    <!-- 3D model + email/LinkedIn panel; hidden on the photography page so the gallery gets the full width -->
+    <contactVue v-if="route.name !== 'photography'" class="inline contact"/>
   </div>
 </template>
 
