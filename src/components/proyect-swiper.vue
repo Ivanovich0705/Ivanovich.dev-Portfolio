@@ -59,26 +59,26 @@ export default {
       proyects: [
         {
           title: "Mazion",
-          desc: "Adventour game made using Sprites in Windows Form.",
+          desc: "Adventure game built with sprites in Windows Forms.",
           tech: "C++",
           githubLink: "https://github.com/Ivanovich0705/Mazion"
         },
         {
           title: "FlightsPy",
-          desc: "Program to find the shortest between airports with Dijkstra's and Prim algorithm.",
+          desc: "Finds the shortest routes between airports using Dijkstra's and Prim's algorithms.",
           tech: "Python Flask, Vue.js, D3.js & MongoDB",
           githubLink: "https://github.com/Ivanovich0705/acomplex-TF"
         },
         {
           title: "Take Me Home",
-          desc: "Program to communicate people to bring parcels from another countries.",
-          tech: " ASP. NET Core, Vue.js & MySQL",
+          desc: "Connects people who need parcels brought from other countries with travelers who can carry them.",
+          tech: "ASP.NET Core, Vue.js & MySQL",
           githubLink: "https://github.com/orgs/TakeMeHome-Del-mundo-a-tus-manos/repositories"
         },
         {
           title: "FastPorte",
-          desc: "Program to communicate truck and van drivers easily with clients.",
-          tech: "Spring Boot, Angular & PostreSQL",
+          desc: "Connects truck and van drivers with clients who need cargo moved.",
+          tech: "Spring Boot, Angular & PostgreSQL",
           githubLink: "https://github.com/orgs/Tech-Company-SW52/repositories"
         },
         {
@@ -89,7 +89,7 @@ export default {
         },
         {
           title: "Ivan's C++ Notes",
-          desc: "Blog to show and save about C++ data structures, algorithms, POO, examples, and some little projects.",
+          desc: "Notes on C++ data structures, algorithms and OOP, with examples and small projects.",
           tech: "C++ & Jupyter Notebook",
           githubLink: "https://github.com/Ivanovich0705/C-Notes"
         }
@@ -152,7 +152,7 @@ export default {
   font-size: 25px;
 }
 
-@media (max-width: 1912px) {
+@media (max-width: 1080px) {
   .proyect-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     overflow: scroll;

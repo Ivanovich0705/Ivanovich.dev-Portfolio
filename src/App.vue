@@ -19,7 +19,8 @@ import proyectsVue from "./components/proyects.vue";
       <heroVue/>
       <aboutVue/>
       <experienceVue/>
-      <proyectsVue/>
+      <!-- Projects section hidden until there are new side projects to show -->
+      <!-- <proyectsVue/> -->
     </body>
     <contactVue class="inline contact"/>
   </div>

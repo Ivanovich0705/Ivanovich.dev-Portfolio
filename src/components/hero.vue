@@ -7,7 +7,8 @@ export default {
     TypeWriter
   },
   mounted() {
-    AOS.init();
+    // offset: px from the bottom of the screen before an element starts animating (default 120)
+    AOS.init({ offset: 20 });
 
   }
 };
@@ -20,15 +21,16 @@ export default {
         <TypeWriter/>
     
         <div data-aos="fade-up" data-aos-delay="800">
-          <div className="intro-subtitle">Currently developing my future.</div>
-          <div className="intro-desc">
-            I'm a software engineer, music and tech lover living in Peru and born in Argentina. <br>
-            I have great interest in artificial intelligence, machine learning, full-stack development, competitive programming and
-            human-computer interactions. Also I love helping and sharing my tech knowledge.
+          <div class="intro-subtitle">Full-stack software engineer.</div>
+          <div class="intro-desc">
+            I build backend and frontend systems with .NET, React, Angular and SQL Server, and I use AI tools
+            to understand complex codebases faster. I'm currently a Software Consultant at
+            <b>Zeal IT Consultants</b>, working on enterprise platforms in rail logistics, legal services and healthcare. <br>
+            Based in Peru, born in Argentina.
           </div>
           <a
             href="mailto:ivanmoran.dev@gmail.com"
-            className="intro-contact"
+            class="intro-contact"
           >
           <i class="bi bi-envelope-at"></i>
             &nbsp Contact Me!

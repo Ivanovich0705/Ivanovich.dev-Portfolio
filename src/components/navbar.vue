@@ -23,12 +23,14 @@
                             <span class="p-steps-title">/experience</span>
                         </a>
                     </li>
+                    <!-- Projects nav item hidden together with the Projects section in App.vue
                     <li href="#proyects" class="p-steps-item scrollspy">
                         <a href="#proyects" class="p-menuitem-link scrollspy" tabindex="-1">
                             <span class="p-steps-number">4</span>
-                            <span class="p-steps-title">/sofware-creations</span>
+                            <span class="p-steps-title">/projects</span>
                         </a>
                     </li>
+                    -->
                 </ol>
             </nav>
         </div>

@@ -7,9 +7,6 @@
             <a target="_blank" href="mailto:ivanmoran.dev@gmail.com">
                 <i class="bi bi-envelope-fill"></i>        
             </a>
-            <a target="_blank" href="https://github.com/Ivanovich0705">
-                <i class="bi bi-github"></i>        
-            </a>
             <a target="_blank" href="https://www.linkedin.com/in/ivan-moran-36a446231/">
                 <i class="bi bi-linkedin"></i>
             </a>
@@ -41,7 +38,7 @@ color: var(--lightest-slate) !important;
 
 .sidebar-logos {
     padding-top: 0px;
-    width: 90px;
+    width: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

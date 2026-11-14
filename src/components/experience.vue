@@ -8,14 +8,13 @@
                     <span class="joblist-job-title" data-aos="fade-up" data-aos-delay="200">
                         {{job.at}}
                     </span>
-                    <span className="joblist-job-company">{{job.key}}</span>
+                    <span class="joblist-job-company">{{job.key}}</span>
                     <div class="joblist-duration" data-aos="fade-up" data-aos-delay="200">
                         {{job.duration}}
                     </div>
+                    <div class="joblist-summary">{{job.summary}}</div>
                     <ul class="job-description">
-                        <div v-for="[index, item] of job.content.entries()" data-aos="fade-up" :data-aos-delay="100+index*150">
-                            <li key={index}>{{item}}</li>
-                        </div>                                    
+                        <li v-for="(item, index) in job.content" :key="index" data-aos="fade-up" :data-aos-delay="100+index*150">{{item}}</li>
                     </ul>
 
                 </TabPanel>
@@ -36,35 +35,51 @@ export default {
     data() {
         return {
             jobs: [
-		    {
-		      at: 'Full Stack Developer @', atTitle: "Bitacore", key: "Bitacore", duration: 'FEB 2023 - PRESENT', content: ["Use of Angular as Front-End Development.",
-			"Use of Spring Boot Java as Back-End Development.",
-			"Improved use of Software Patterns and Clean Code.", "Used Agile Technologies as Jira Software.", "Used GitLab and BitBucket as Project Repositories."]
-		    },
-		    {
-		      at: 'Learn Student Ambassador @', atTitle: "MLSA", key: "Microsoft", duration: 'APR 2023 - PRESENT', content: ["Selected to be a part of the prestigious Microsoft Learn Student Ambassador program, which accepts only a small percentage of applicants based on their skills and professional achievements.",
-			"Learned about DevOps, including professional use of Jenkins and Tomcat.",
-			"Organized and led Microsoft Learn workshops and events on various topics including cloud computing and software development."]
-		    },
-		    {
-		      at: 'Open Ai Hackaton Finalist @', atTitle: "Start Up Hackaton", key: "lablab.ai", duration: 'FEB 2023', content: ["Participated in the OpenAI hackathon and developed Gener8, a project that analyzes user YouTube videos and automatically generates sub-videos using sentiment analysis and OpenAI API.",
-			"Utilized Google's Python API to extract and analyze user-generated content for the hackathon project.",
-			"Implemented Firebase for real-time data synchronization and Google Cloud for hosting the application.",
-			"Built a sub-video generation tool that uses OpenAI's language generation models to automatically create sub-videos for content creators based on user input.", "Integrated the Google API to authenticate and authorize user credentials and access their YouTube and Google Drive accounts"]
-		    },
-		    {
-		      at: 'ULatin Hack @', atTitle: "ULatin Hack", key: "SAP & CSTI", duration: 'MAY 2022', content: ["4-week virtual program, composed of students from 13 different universities in Latin America.",
-			"Learned about Design Thinking, Software Patterns and Best Practices from 8 international SAP exhibitors.",
-			"Used SAP technologies to build chatbot, Appgyver, IRPA, and backend."]
-		    },
-		    {
-		      at: 'IT Support for Local Translator', atTitle: 'IT Support', key: "", duration: ' APR 2018 - PRESENT', content: ["Learned to communicate with technology terms in English.",
-			"Improved my communication skills.",
-		      "Solved IT Problems on computers and social media."]
-		    },
-		    {
-		      at: 'Latin American Forum @', atTitle: 'Latin American Forum', key: "Oxford", duration: 'JUN 2022 ', content: ["Learned about basic economy","Helped to get social, economic, politic and cultural awareness of Latin America."]}
-		]
+              {
+                atTitle: 'Rail Logistics',
+                at: 'Software Consultant @ ', key: 'Zeal IT Consultants',
+                duration: 'APR 2026 - OCT 2026',
+                summary: 'Developer on a tactical team migrating a legacy system to a new railcar asset management platform (React, gRPC, .NET).',
+                content: [
+                  'Learned and implemented gRPC to streamline service-to-service communication and clarify the system architecture.',
+                  'Used Claude Code to analyze and map a complex legacy system, shortening onboarding and speeding up root-cause analysis.',
+                  'Built full-stack features with .NET, React and SQL Server under tight delivery deadlines.'
+                ]
+              },
+              {
+                atTitle: 'Client Portal',
+                at: 'Software Consultant @ ', key: 'Zeal IT Consultants',
+                duration: 'JUL 2024 - JUN 2026',
+                summary: 'Developer on a legal-services client portal (Angular, .NET), evolving it from an admin-only tool into a multi-client platform.',
+                content: [
+                  'Re-architected user management from an internal-only model to multi-client, role-based access, so the platform could securely serve external clients.',
+                  'Built metrics and dashboard pages that gave clients real-time visibility into their data.',
+                  'Integrated the Jira API for bidirectional ticket syncing with custom priority filters, saving hours of manual tracking and coordination.'
+                ]
+              },
+              {
+                atTitle: 'Healthcare QA',
+                at: 'Quality Assistant @ ', key: 'Zeal IT Consultants',
+                duration: 'SEP 2025 - APR 2026',
+                summary: 'QA for a healthcare migration from Salesforce to Microsoft Dynamics 365.',
+                content: [
+                  'Validated data integrity during the migration and database redesign.',
+                  'Identified, documented and tracked defects across migration phases, resolving them with developers before go-live.',
+                  'Supported UAT sessions and tested integrations between Dynamics 365, Power Apps and the client\'s systems.'
+                ]
+              },
+              {
+                atTitle: 'Bitacore',
+                at: 'Jr. Software Developer @ ', key: 'Bitacore',
+                duration: 'FEB 2023 - JUN 2024',
+                summary: 'Built systems for a pharmaceutical distributor: inventory, finance, client communication and transport.',
+                content: [
+                  'Cut invoice processing time by 40% by implementing automatic OCR with Google Document AI.',
+                  'Built a Google Chat chatbot with Dialogflow translation, making information retrieval 35% faster.',
+                  'Developed Salesforce-based registration modules for pharmaceutical purchases and sales.'
+                ]
+              }
+            ]
         }
     }
 }
@@ -96,6 +111,13 @@ export default {
     font-size: 18px;
     color: var(--slate);
   }
+.joblist-summary {
+    font-family: "NTR", sans-serif;
+    font-size: 19px;
+    color: var(--lightest-slate);
+    max-width: 650px;
+    padding-top: 12px;
+}
 .tabs{
     width: 50%;
 }

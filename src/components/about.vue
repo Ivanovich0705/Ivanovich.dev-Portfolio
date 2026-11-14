@@ -8,16 +8,16 @@ export default {
     data() {
         return {
             tech_stack: [
-                "C++",
-                "Python",
-                "Vue.js",
-                "Javascript",
-                "SQL",
-                "MongoDB",
-                "ASP.NET Core",
+                "C# & .NET",
+                "TypeScript",
+                "React",
                 "Angular",
-                "HTML & CSS",
-                "Bootstrap",
+                "SQL Server (T-SQL)",
+                "gRPC",
+                "Java & Spring Boot",
+                "Python & Flask",
+                "Azure",
+                "LLM APIs & Claude Code",
             ],
         }
     }
@@ -31,31 +31,34 @@ export default {
         <sectionTitle title="/ about me"/>
 
           <div class="about-content">
-            <div data-aos="fade-up" data-aos-delay="200" class="about-description">
+            <div data-aos="fade-up" data-aos-delay="50" class="about-description">
                 <p>
-                    I am currently a fourth year <b style="color: var(--green-bright)">Engineer Software</b> major at the 
-                    <a target="_blank" href="https://www.upc.edu.pe/en/nosotros/pilares-estrategicos/exigencia/">
-                    Peruvian University of Applied Sciences</a>. I'm interested in any new discovery of science and tech.
-                    I've always loved tech and fascinated me how it can help us to solve problems and make our lives easier, 
-                    especially with <b style="color: var(--green-bright)">artifical inteligence</b> and
-                     <b style="color: var(--green-bright)">machine learning</b> and would love to one day make a living out of that.  
+                    I'm a software engineer with professional experience since 2023, working across the whole stack:
+                    from database design and service architecture to the screens clients use every day.
+                    I studied <b style="color: var(--green-bright)">Software Engineering</b> at the
+                    <a target="_blank" href="https://www.upc.edu.pe/">Peruvian University of Applied Sciences (UPC)</a>.
                 </p>
-              Here are some technologies I have been working and loving them:
+                <p>
+                    I like hard problems and new technologies: migrating legacy systems, redesigning access models,
+                    and bringing <b style="color: var(--green-bright)">AI</b> into real workflows, from document OCR
+                    and chatbots to AI-assisted analysis of large codebases.
+                </p>
+              Technologies I work with:
                 <div class="row">
                     <ul class="tech-stack">
-                        <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="100+index*100" >
+                        <div data-aos="fade-up" v-for="[index, item] of tech_stack.entries()" :data-aos-delay="index*60" >
                             <li>{{item}}</li>
                         </div>
                     </ul>
                 </div>
               <p>
-                Outside of work and studying, I play video games. I'm a big fan of the <b style="color: var(--green-bright)"> Star Wars </b> series, and a high variety of sitcoms, 
-                and starting into the audiophile world. Also I'm a tennis and ping pong player.
+                Outside of work, I play video games, I'm a big Star Wars fan,
+                I enjoy sitcoms, audio gear and photography, and I play <b style="color: var(--green-bright)">tennis</b>.
               </p>
             </div>
-            <div class="about-image" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-image" data-aos="fade-up" data-aos-delay="100">
 
-                <img src="../assets/profile.png" alt="">
+                <img src="../assets/profile.png" alt="Portrait of Ivan Moran">
                 
             </div>
           </div>
@@ -70,7 +73,7 @@ a{
     color: var(--green-bright);
   }
 #about {
-    padding-top: 200px;
+    padding-top: 110px;
     padding-left: 15%;
     padding-right: 25%;
     min-height: 60vh;
@@ -83,7 +86,9 @@ a{
     padding-top: 20px;
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(2, minmax(150px, 10px));
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    column-gap: 24px;
+    padding-left: 0;
 }
 
 .about-description li {
@@ -164,6 +169,10 @@ a{
     .about-description a,
     .about-description b {
         font-size: 17px;
+    }
+
+    .about-description ul {
+        grid-template-columns: 1fr;
     }
 
     .about-image img {
