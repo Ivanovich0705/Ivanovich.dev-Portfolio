@@ -51,10 +51,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
 
+/* Navy behind everything, in light and dark mode, so iOS Safari's
+   safe area and overscroll areas match the page instead of showing black */
+html {
+  background-color: var(--navy);
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
+  background: var(--color-background, var(--navy));
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family: NTR,  sans-serif;
