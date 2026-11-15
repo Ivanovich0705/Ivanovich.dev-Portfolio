@@ -4,11 +4,11 @@ import { RouterLink } from 'vue-router'
 import GLightbox from 'glightbox'
 import 'glightbox/dist/css/glightbox.min.css'
 import sectionTitle from '../components/sectionTitle.vue'
-import { intro, sweNote, services, booking, photos } from '../data/photos.js'
+import { intro, sweNote, services, booking, gear, photos } from '../data/photos.js'
 
 const bookingHref = `mailto:${booking.email}?subject=${encodeURIComponent(booking.subject)}`
 
-const ALL = 'All'
+const ALL = 'Todas'
 const activeCategory = ref(ALL)
 
 const categories = computed(() => {
@@ -72,12 +72,12 @@ function openPhoto(index) {
 </script>
 
 <template>
-  <section id="photography">
+  <section id="photography" lang="es">
     <RouterLink to="/" class="back-link" data-aos="fade-up">
-      <i class="bi bi-arrow-left"></i> back home
+      <i class="bi bi-arrow-left"></i> volver al inicio
     </RouterLink>
 
-    <sectionTitle title="/ photography"/>
+    <sectionTitle title="/ fotografia"/>
 
     <p class="photo-intro" data-aos="fade-up" data-aos-delay="100">{{ intro }}</p>
     <p class="photo-swe-note" data-aos="fade-up" data-aos-delay="150">
@@ -85,7 +85,9 @@ function openPhoto(index) {
       <span>{{ sweNote }}</span>
     </p>
 
-    <!-- Services -->
+    <!-- Services (Eventos, Productos y marcas) and booking button hidden for now.
+         Uncomment this block to show them again; the text lives in src/data/photos.js.
+
     <div class="services">
       <div
         v-for="(service, index) in services"
@@ -100,23 +102,44 @@ function openPhoto(index) {
       </div>
     </div>
 
-    <!-- Booking call-to-action -->
     <div class="booking" data-aos="fade-up" data-aos-delay="300">
       <a :href="bookingHref" class="booking-button">
         <i class="bi bi-camera"></i>&nbsp; {{ booking.label }}
       </a>
       <span v-if="booking.note" class="booking-note">{{ booking.note }}</span>
     </div>
+    -->
 
-    <h2 class="gallery-heading" data-aos="fade-up">Recent work</h2>
+    <!-- Gear -->
+    <template v-if="gear.length">
+      <h2 class="gallery-heading" data-aos="fade-up">Mi equipo</h2>
+      <div class="gear">
+        <div
+          v-for="(item, index) in gear"
+          :key="item.name"
+          class="gear-card"
+          data-aos="fade-up"
+          :data-aos-delay="100 + index * 80"
+        >
+          <i class="bi" :class="item.icon"></i>
+          <div>
+            <div class="gear-type">{{ item.type }}</div>
+            <div class="gear-name">{{ item.name }}</div>
+            <div class="gear-desc">{{ item.desc }}</div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <h2 class="gallery-heading" data-aos="fade-up">Trabajos recientes</h2>
 
     <!-- Gallery -->
     <template v-if="photos.length">
       <div class="photo-meta" data-aos="fade-up" data-aos-delay="150">
-        {{ photos.length }} {{ photos.length === 1 ? 'photo' : 'photos' }}
+        {{ photos.length }} {{ photos.length === 1 ? 'foto' : 'fotos' }}
       </div>
 
-      <div v-if="categories.length > 2" class="filter-chips" role="toolbar" aria-label="Filter photos by category" data-aos="fade-up" data-aos-delay="200">
+      <div v-if="categories.length > 2" class="filter-chips" role="toolbar" aria-label="Filtrar fotos por categoria" data-aos="fade-up" data-aos-delay="200">
         <button
           v-for="category in categories"
           :key="category"
@@ -132,7 +155,7 @@ function openPhoto(index) {
 
       <TransitionGroup name="photo" tag="div" class="photo-grid">
         <figure v-for="(photo, index) in visiblePhotos" :key="photo.src" class="photo-card">
-          <button type="button" class="photo-button" :aria-label="`Open ${photo.title}`" @click="openPhoto(index)">
+          <button type="button" class="photo-button" :aria-label="`Abrir ${photo.title}`" @click="openPhoto(index)">
             <img
               :src="photo.thumb || photo.src"
               :alt="photo.title"
@@ -157,8 +180,8 @@ function openPhoto(index) {
       <div class="empty-note" data-aos="fade-up" data-aos-delay="150">
         <i class="bi bi-camera"></i>
         <div>
-          <div class="empty-title">First roll in progress</div>
-          <div class="empty-sub">Photos are on the way. Check back soon.</div>
+          <div class="empty-title">Primer rollo en proceso</div>
+          <div class="empty-sub">Las fotos vienen en camino. ¡Vuelve pronto!</div>
         </div>
       </div>
 
@@ -280,6 +303,51 @@ function openPhoto(index) {
   color: var(--green-bright);
 }
 .booking-note {
+  font-size: 17px;
+  color: var(--slate);
+}
+
+/* Gear */
+.gear {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  max-width: 820px;
+  margin-bottom: 56px;
+}
+.gear-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background-color: var(--light-navy);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.gear-card:hover {
+  border-color: var(--lightest-navy);
+  transform: translateY(-3px);
+}
+.gear-card > i {
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--green-bright);
+}
+.gear-type {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+}
+.gear-name {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--lightest-slate);
+}
+.gear-desc {
+  margin-top: 4px;
   font-size: 17px;
   color: var(--slate);
 }
