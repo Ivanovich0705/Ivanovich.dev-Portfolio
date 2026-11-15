@@ -29,6 +29,21 @@
 
       </header>
 
+    <!-- Phones only: bottom tab bar (the top menu is hidden under 500px) -->
+    <nav class="mobile-tabbar" aria-label="Main">
+        <RouterLink
+            v-for="item in items"
+            :key="item.label"
+            :to="item.to"
+            class="mobile-tab"
+            :class="{ active: isActive(item) }"
+            :aria-current="isActive(item) ? 'page' : undefined"
+        >
+            <i class="bi" :class="item.mobileIcon" aria-hidden="true"></i>
+            <span class="mobile-tab-label">{{ item.label.slice(1) }}</span>
+        </RouterLink>
+    </nav>
+
 </template>
 
 <style scoped>
@@ -70,11 +85,70 @@ span{
     opacity: 0.95;
 }
 
+/* Bottom tab bar: hidden on larger screens */
+.mobile-tabbar {
+    display: none;
+}
+
 @media screen and (max-width: 500px) {
+    /* The tab bar replaces the top menu, so drop it instead of leaving an empty gap */
     header {
+        display: none;
+    }
+
+    .mobile-tabbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+        background-color: rgba(10, 25, 47, 0.96);
+        border-top: 1px solid var(--lightest-navy);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .mobile-tab {
         display: flex;
-        visibility: hidden;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 2px;
+        min-height: 48px;
+        border-radius: 10px;
+        color: var(--slate);
+        font-family: "NTR", sans-serif;
+        /* #app sets a large font-size on phones; keep the bar's text small and fixed */
+        font-size: 12px;
+        line-height: 1.1;
+        -webkit-tap-highlight-color: transparent;
+        transition: color 0.2s ease, background-color 0.2s ease;
+    }
+    .mobile-tab i {
+        font-size: 20px;
+    }
+    .mobile-tab .mobile-tab-label {
+        color: inherit;
+    }
+    .mobile-tab.active {
+        color: var(--green-bright);
+        background-color: var(--light-navy);
+    }
+    .mobile-tab:focus-visible {
+        outline: 2px solid var(--green-bright);
+        outline-offset: -2px;
+    }
+}
+</style>
+
+<style>
+/* Leave room at the bottom of every page so the tab bar never covers content */
+@media screen and (max-width: 500px) {
+    body {
+        padding-bottom: calc(64px + env(safe-area-inset-bottom));
     }
 }
 </style>
@@ -84,11 +158,12 @@ import { RouterLink } from 'vue-router'
 
 // Home page sections the navbar can scroll to.
 // Projects (#proyects) is hidden for now; add { label: '/projects', to: { path: '/', hash: '#proyects' }, section: 'proyects' } to bring it back.
+// `icon` replaces the step number in the top menu; `mobileIcon` is used by the phone tab bar.
 const ITEMS = [
-    { label: '/home', to: { path: '/', hash: '#intro' }, section: 'intro' },
-    { label: '/about', to: { path: '/', hash: '#about' }, section: 'about' },
-    { label: '/experience', to: { path: '/', hash: '#experience' }, section: 'experience' },
-    { label: '/photography', to: { path: '/photography' }, route: 'photography', icon: 'bi-camera' },
+    { label: '/home', to: { path: '/', hash: '#intro' }, section: 'intro', mobileIcon: 'bi-house' },
+    { label: '/about', to: { path: '/', hash: '#about' }, section: 'about', mobileIcon: 'bi-person' },
+    { label: '/experience', to: { path: '/', hash: '#experience' }, section: 'experience', mobileIcon: 'bi-briefcase' },
+    { label: '/photography', to: { path: '/photography' }, route: 'photography', icon: 'bi-camera', mobileIcon: 'bi-camera' },
 ]
 
 export default {
