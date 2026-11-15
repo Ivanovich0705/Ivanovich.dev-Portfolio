@@ -16,7 +16,10 @@
                             class="p-menuitem-link"
                             :aria-current="isActive(item) ? 'page' : undefined"
                         >
-                            <span class="p-steps-number">{{ index + 1 }}</span>
+                            <span class="p-steps-number">
+                                <i v-if="item.icon" class="bi" :class="item.icon" aria-hidden="true"></i>
+                                <template v-else>{{ index + 1 }}</template>
+                            </span>
                             <span class="p-steps-title">{{ item.label }}</span>
                         </RouterLink>
                     </li>
@@ -85,7 +88,7 @@ const ITEMS = [
     { label: '/home', to: { path: '/', hash: '#intro' }, section: 'intro' },
     { label: '/about', to: { path: '/', hash: '#about' }, section: 'about' },
     { label: '/experience', to: { path: '/', hash: '#experience' }, section: 'experience' },
-    { label: '/photography', to: { path: '/photography' }, route: 'photography' },
+    { label: '/photography', to: { path: '/photography' }, route: 'photography', icon: 'bi-camera' },
 ]
 
 export default {
