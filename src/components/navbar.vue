@@ -106,7 +106,6 @@ span{
         grid-template-columns: repeat(4, 1fr);
         padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
         background-color: rgba(10, 25, 47, 0.96);
-        border-top: 1px solid var(--lightest-navy);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
     }
@@ -133,9 +132,10 @@ span{
     .mobile-tab .mobile-tab-label {
         color: inherit;
     }
+    /* Active tab: cyan icon and bold label, no background (like the desktop menu) */
     .mobile-tab.active {
         color: var(--green-bright);
-        background-color: var(--light-navy);
+        font-weight: bold;
     }
     .mobile-tab:focus-visible {
         outline: 2px solid var(--green-bright);
