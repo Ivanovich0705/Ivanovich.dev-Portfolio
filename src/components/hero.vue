@@ -19,8 +19,8 @@ export default {
           <div class="intro-desc">
             I build backend and frontend systems with .NET, React, Angular and SQL Server, and I use AI tools
             to understand complex codebases faster. I'm currently a Software Consultant at
-            <b>Zeal IT Consultants</b>, working on enterprise platforms in rail logistics, legal services and healthcare. <br>
-            Based in Peru, born in Argentina.
+            <span class="highlight">Zeal IT Consultants</span>, working on enterprise platforms in rail logistics, legal services and healthcare. <br>
+            Working remotely for a <span class="highlight">USA</span> based company from Peru. Born in Argentina.
           </div>
           <a
             href="mailto:ivanmoran.dev@gmail.com"
@@ -94,6 +94,11 @@ a, u {
     padding-bottom: 50px;
   }
   
+  .highlight {
+    color: var(--green-bright);
+    font-weight: bold;
+  }
+
   .intro-contact {
     font-size: 22px;
     font-weight: bolder;
